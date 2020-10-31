@@ -30,7 +30,7 @@ public class AlphabetScript : MonoBehaviour
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, 20);
             isCollected = true;
-            counter.onCollected();
+            counter.OnCollected();
         }
     }
 }
