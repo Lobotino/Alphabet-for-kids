@@ -121,49 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &351009699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 351009701}
-  - component: {fileID: 351009700}
-  m_Layer: 0
-  m_Name: PlayerController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &351009700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351009699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4b1ed3debe2af46bc92e410ae94305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &351009701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351009699}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.142435, y: 3.7937348, z: -715.02606}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 519420031, guid: e8b3e69494ed5e94abc6218e2e34749d,
@@ -66919,12 +66876,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!50 &1372659648 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3463531881324280781, guid: e8b3e69494ed5e94abc6218e2e34749d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1784522037843395134}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407451804
 GameObject:
   m_ObjectHideFlags: 0
@@ -67291,7 +67242,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1784522037843395136}
           m_MethodName: Jump
-          m_Mode: 6
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -67589,7 +67540,7 @@ PrefabInstance:
     - target: {fileID: 1784522039165590913, guid: e8b3e69494ed5e94abc6218e2e34749d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.88
+      value: -3.71
       objectReference: {fileID: 0}
     - target: {fileID: 1784522039165590913, guid: e8b3e69494ed5e94abc6218e2e34749d,
         type: 3}
@@ -67654,11 +67605,11 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1784522037843395134}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1784522037843395136
+--- !u!114 &1784522037843395136 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1784522037843395136, guid: e8b3e69494ed5e94abc6218e2e34749d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1784522037843395134}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784522037843395135}
   m_Enabled: 1
@@ -67666,12 +67617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21da5a92f7f94ba4bad126a87ea2e5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 1372659648}
-  playerSpeed: 5
-  jumpPower: 6
-  directionInput: 0
-  groundCheck: 1
-  facingRight: 1
 --- !u!1001 &4249108805716600967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67722,7 +67667,7 @@ PrefabInstance:
     - target: {fileID: 4249108804981974231, guid: 0652398d009070c40b226079526a1913,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4249108804981974231, guid: 0652398d009070c40b226079526a1913,
         type: 3}

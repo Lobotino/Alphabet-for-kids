@@ -1,18 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CharController : MonoBehaviour
 {
-    public Rigidbody2D rb2d;
+    private Animator animator;
+    private Rigidbody2D rb2d;
     public float playerSpeed;
     public float jumpPower;
-    public int directionInput;
-    public bool groundCheck;
-    public bool facingRight = true;
+    private int directionInput;
+    private bool facingRight = true;
+    private bool isJump;
 
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
+
     void Update()
     {
         if ((directionInput < 0) && (facingRight))
@@ -24,7 +28,11 @@ public class CharController : MonoBehaviour
         {
             Flip();
         }
-        groundCheck = true;
+
+        isJump = Math.Abs(rb2d.velocity.y) > 0.01;
+
+        animator.SetBool("isRun", directionInput != 0);
+        animator.SetBool("isJump", isJump);
     }
 
     void FixedUpdate()
@@ -37,12 +45,11 @@ public class CharController : MonoBehaviour
         directionInput = InputAxis;
     }
 
-    public void Jump(bool isJump)
+    public void Jump()
     {
-        isJump = groundCheck;
-
-        if (groundCheck)
+        if (!isJump)
         {
+            isJump = true;
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
         }
     }
