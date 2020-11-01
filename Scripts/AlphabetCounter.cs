@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class AlphabetCounter : MonoBehaviour
 {
     public GameController gameController;
+
+    public int victoryCount = 33;
     
     public int alphabetCount = 0;
 
@@ -17,7 +19,7 @@ public class AlphabetCounter : MonoBehaviour
         alphabetCount++;
         textCounter.text = "Собрано букв: " + alphabetCount;
 
-        if (alphabetCount >= 33)
+        if (alphabetCount >= victoryCount)
         {
             gameController.ShowVictory();
         }
