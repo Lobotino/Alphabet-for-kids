@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class AlphabetScript : MonoBehaviour
 {
+
+    private AudioSource audioSource;
+    
     private AlphabetCounter counter;
     
     private Rigidbody2D rb2d;
@@ -15,6 +18,7 @@ public class AlphabetScript : MonoBehaviour
     {
         counter = GameObject.Find("GameController").GetComponent<AlphabetCounter>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -31,6 +35,7 @@ public class AlphabetScript : MonoBehaviour
             rb2d.velocity = new Vector2(rb2d.velocity.x, 20);
             isCollected = true;
             counter.OnCollected();
+            audioSource.Play();
         }
     }
 }
